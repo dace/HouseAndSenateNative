@@ -7,17 +7,11 @@ import devToolsEnhancer from 'remote-redux-devtools';
 import reducers from '../../reducers';
 import HomeNav from '../../components/HomeNav';
 
+const store = createStore(reducers, devToolsEnhancer(), applyMiddleware(thunk));
+
 const App = () => {
   return (
-    <Provider
-      store={
-        createStore(
-          reducers,
-          devToolsEnhancer(),
-          applyMiddleware(thunk),
-        )
-      }
-    >
+    <Provider store={store}>
       <View style={styles.wrapper}>
         <HomeNav />
       </View>
