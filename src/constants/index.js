@@ -1,0 +1,16 @@
+// Fetch all members
+export const FETCH_ALL_HOUSE_MEMBERS = 'FETCH_ALL_HOUSE_MEMBERS';
+export const FETCH_ALL_SENATE_MEMBERS = 'FETCH_ALL_SENATE_MEMBERS';
+
+// Fetch all bills
+export const FETCH_ALL_HOUSE_BILLS = 'FETCH_ALL_HOUSE_BILLS';
+export const FETCH_ALL_SENATE_BILLS = 'FETCH_ALL_SENATE_BILLS';
+
+// Fetch all votes
+export const FETCH_ALL_HOUSE_VOTES = 'FETCH_ALL_HOUSE_VOTES';
+export const FETCH_ALL_SENATE_VOTES = 'FETCH_ALL_SENATE_VOTES';
+
+// Selections
+export const SELECT_BILL = 'SELECT_BILL';
+export const SELECT_MEMBER = 'SELECT_MEMBER';
+export const SELECT_STATE = 'SELECT_MEMBER';
