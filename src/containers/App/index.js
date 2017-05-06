@@ -20,9 +20,7 @@ const App = () => {
 };
 
 const styles = StyleSheet.create({
-  wrapper: {
-    flex: 1,
-  }
+  wrapper: { flex: 1 },
 });
 
 export default App;
