@@ -1,7 +1,13 @@
 import React from 'react';
 import { Provider } from 'react-redux';
-import { View, StyleSheet } from 'react-native';
-import { createStore, applyMiddleware } from 'redux';
+import {
+  createStore,
+  applyMiddleware,
+} from 'redux';
+import {
+  Scene,
+  Router,
+} from 'react-native-router-flux';
 import thunk from 'redux-thunk';
 import devToolsEnhancer from 'remote-redux-devtools';
 import reducers from '../../reducers';
@@ -12,15 +18,13 @@ const store = createStore(reducers, devToolsEnhancer(), applyMiddleware(thunk));
 const App = () => {
   return (
     <Provider store={store}>
-      <View style={styles.wrapper}>
-        <MenuHome />
-      </View>
+      <Router>
+        <Scene key="root">
+          <Scene key="home" component={MenuHome} title="Login" />
+        </Scene>
+      </Router>
     </Provider>
   );
 };
-
-const styles = StyleSheet.create({
-  wrapper: { flex: 1 },
-});
 
 export default App;
