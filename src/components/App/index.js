@@ -12,6 +12,8 @@ import thunk from 'redux-thunk';
 import devToolsEnhancer from 'remote-redux-devtools';
 import reducers from '../../reducers';
 import MenuHome from '../MenuHome';
+import MenuSelectChamber from '../MenuSelectChamber';
+import StatesList from '../StatesList';
 
 const store = createStore(reducers, devToolsEnhancer(), applyMiddleware(thunk));
 
@@ -20,7 +22,9 @@ const App = () => {
     <Provider store={store}>
       <Router>
         <Scene key="root">
-          <Scene key="home" component={MenuHome} title="Login" />
+          <Scene key="menuHome" component={MenuHome} title="Home Nav" initial={true} />
+          <Scene key="menuSelectChamber" component={MenuSelectChamber} title="Select a Chamber" />
+          <Scene key="statesList" component={StatesList} title="Select a State" />
         </Scene>
       </Router>
     </Provider>
