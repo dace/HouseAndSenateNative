@@ -1,13 +1,15 @@
 import React from 'react';
-import { View, StyleSheet } from 'react-native';
-import SectionBox from '../SectionBox';
+import { 
+  View, 
+  StyleSheet 
+} from 'react-native';
+import MenuSection from '../MenuSection';
 
 const HomeNav = () => {
   return (
     <View style={styles.wrapper}>
-      <SectionBox title="MEMBERS" />
-      <SectionBox title="BILLS" />
-      <SectionBox title="VOTES" />
+      <MenuSection title="Bills" />
+      <MenuSection title="Members" />
     </View>
   );
 };
