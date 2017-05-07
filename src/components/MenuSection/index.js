@@ -5,11 +5,12 @@ import {
   Image,
   StyleSheet,
 } from 'react-native';
+import { Actions } from 'react-native-router-flux';
 
-const SectionBox = ({ title }) => {
+const SectionBox = ({ title, action }) => {
   return (
     <View style={styles.wrapper}>
-      <Text>{title.toUpperCase()}</Text>
+      <Text onPress={action}>{title.toUpperCase()}</Text>
     </View>
   );
 };
