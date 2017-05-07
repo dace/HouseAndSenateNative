@@ -1,10 +1,10 @@
 import React from 'react';
-import { 
-  View, 
+import {
+  View,
   StyleSheet,
 } from 'react-native';
-import MenuSection from '../MenuSection';
 import { Actions } from 'react-native-router-flux';
+import MenuSection from '../MenuSection';
 
 const MenuHome = () => {
   return (
