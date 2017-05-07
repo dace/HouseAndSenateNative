@@ -9,7 +9,7 @@ import {
 const SectionBox = ({ title }) => {
   return (
     <View style={styles.wrapper}>
-      <Text>{title}</Text>
+      <Text>{title.toUpperCase()}</Text>
     </View>
   );
 };
